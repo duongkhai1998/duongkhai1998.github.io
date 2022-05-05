@@ -1,0 +1,49 @@
+<style>
+        h2{ 
+            color: violet;
+            background-color: black;
+            font-size: large;
+            text-align: center;
+            color: cornflowerblue;
+
+
+        }
+
+        #ding {
+            color: rgb(115, 161, 35);
+            text-transform: uppercase;
+            text-align: center;
+
+
+        }
+        .ex {
+    font-size: 22px;
+    font-style: unset;
+    color: coral;
+    text-align: center;}
+    h1.text-violet{
+        color: violet;
+    }
+    .text-center{
+        text-align: center;
+    }
+    .font-italic{
+        font-style: italic;
+    }
+    h1.font-italic{
+        font-style: italic;
+    }
+
+    .box p{
+        color: darkorange;
+
+    }
+
+
+   
+
+
+
+    
+
+    </style>
