@@ -1,0 +1,44 @@
+*{
+    box-sizing: border-box;
+}
+:root {
+    --color-text: #cc1439 ;
+    --color-heading: #20911c ;
+    --width:100px;
+    --heigh: 100px;
+
+}
+
+.text{
+    --color-text: rgb(145, 24, 226) ;
+
+    font-size: 2rem;
+    color:var(--color-text)
+}
+.box{
+    font-size: 10px;
+    color: var(--color-heading);
+}
+.box p{
+    font-size: 1.5em;
+}
+.shape{
+    width: 50vw;
+    height: 50vh;
+    background-color: royalblue;
+}
+.cha{
+    width: 50vw;
+    height: 50vh;
+    background-color: royalblue;
+}
+.con{
+    width: calc(8* var(--width));
+    height: calc(4* var(--heigh));
+    background-color: brown;
+}
+.box h2{
+    font-family: sans-serif;
+    font-size: 3em;
+    color:var(--color-text)
+}
