@@ -1,0 +1,73 @@
+/* clear một số thuộc tính css mặc định */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: "roboto";
+    color: #464646;
+}
+/* clear một số thuộc tính css mặc định trong thẻ */
+a{
+    text-decoration: none;
+}
+ul li {
+    list-style-type: none;
+}
+button{
+    border: none;
+}
+/* card */
+.card{
+    width: 400px;
+    background-color: #fff;
+    box-shadow:0 4px 4px rgb(0 0 0 / 15%) ;
+    margin: auto;
+    margin-top: 100px;
+}
+.year{
+    background-color: #ef5321;
+}
+.year p {
+    text-align: center;
+    font-weight: 300;
+    color: #fff;
+    padding: 6px;
+    font-size: 16px;
+}
+.date{
+    background-color: #fd6d3f;
+    padding: 32px;
+}
+.date h2 {
+    color: #fff;
+    text-align: center;
+}
+.date p {
+    color: #fff;
+    text-align: center;
+
+}
+.info{
+    padding: 20px;
+}
+.info h2{
+    font-size: 21px;
+    font-weight: 400;
+    margin-bottom: 19px;
+}
+.info p {
+    font-size: 14px;
+    margin: 10px 0;
+}
+:info:nth-child(4){
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 14px;
+
+}
+.info a {
+    color: #3c78e8;
+    font-weight: 300;
+}
+© 2022 GitHu

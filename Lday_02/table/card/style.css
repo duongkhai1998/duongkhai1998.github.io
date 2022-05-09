@@ -28,7 +28,7 @@ img{
     font-weight: 100;
     color: #757575;
 }
-.content span{
-    
-
+.info{
+    display: flex;
+    justify-content: space-between;
 }
