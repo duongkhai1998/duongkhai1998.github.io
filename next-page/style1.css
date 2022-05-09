@@ -10,24 +10,20 @@
 
     width: 780px;
     height: 700px;
+    
 }
 button{
     width: 120px;
     height: 35px;
-   margin-left: 0px;
+   margin-left:0px;
    background-color: rgb(60, 175, 60);
    color: white;
    border: 0;
    
 }
 h2{
+    color: coral;
     font-size: 30px;
     font-weight: 500;
-    line-height: 1.2;
-}
-h3{
-    font-size: 20px;
-}
-p{
-    font-size: 16px;
+    line-height: 1.5;
 }
