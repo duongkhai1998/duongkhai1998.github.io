@@ -124,6 +124,7 @@ ul {
     flex-wrap: nowrap;
     justify-content: 
     space-between;
+    font-size: 16px;
 }
 
 .footer-col {

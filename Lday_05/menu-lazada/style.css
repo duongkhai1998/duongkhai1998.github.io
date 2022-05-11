@@ -1,0 +1,127 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-color: azure;
+    
+
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    color: #757575;
+}
+
+a {
+    text-decoration: none;
+    color: #757575;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.title {
+   position: relative;
+   top: -270px;
+   left: -500px;
+   
+    margin-bottom: 20px;
+}
+
+.menu {
+    
+ 
+    background-color: #fff;
+    position: relative;
+    top: -268px;
+    left: -500px;
+   
+}
+
+.menu-item {
+    width: 200px;
+    /* position: relative; */
+}
+
+.menu-item p {
+    padding-left: 8px;
+    padding-right: 8px;
+    height: 27px;
+    line-height: 27px;
+    text-decoration: none;
+    font-size: 13px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.menu-item p .icon {
+    display: none;
+}
+
+
+.menu-item:hover > p .icon,
+.menu-item:hover > p .icon {
+    display: inline-block;
+    color: chocolate;
+}
+
+.sub-menu {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background-color:#fff;
+    display: none;
+    height: 100%;
+}
+
+.menu-item:hover .sub-menu {
+    display: block;
+}
+.sub-menu2 {
+    width: 200px;
+    position: absolute;
+    top: 0;
+    left: 200px;
+    background-color: #fff;
+    display: none;
+    height: 100%;
+}
+.sub-menu .menu-item:hover .sub-menu2{
+    display: block;
+}
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+.header-image{
+    
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+}
+
+header{
+     
+    background-image:url(https://icms-image.slatic.net/images/ims-web/894c039f-ca59-4f2e-8d66-d0a5166a231a.jpg);
+    width: 100%;
+    height: 100vh;
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+img{
+    position: relative;
+    top: 200px;
+    
+}

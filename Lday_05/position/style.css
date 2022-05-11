@@ -1,0 +1,44 @@
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: aqua;
+    position: relative;
+    top: 50px;
+    left: 100px;
+    z-index: 2;
+}
+body{
+    height: 2000px;
+}
+.parent{
+    height: 500px;
+    width: 1000px;
+    background-color: coral;
+    position: relative;
+}
+.child{
+    width: 300px;
+    height: 100px;
+    background-color: crimson;
+    position: absolute;
+    top: 50px;
+    left: 100px;
+}
+.btn-top{
+    background-color: blueviolet;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+
+
+}
+.sticky{
+    height: 100px;
+    background-color: deeppink;
+    position: sticky;
+    top: 50px;
+    left: 0;
+}
