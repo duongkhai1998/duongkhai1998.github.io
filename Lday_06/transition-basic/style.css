@@ -1,0 +1,37 @@
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: lawngreen;
+    /* transition-property: witdh, height;
+    transition-duration: 1s, 2s;
+    transition-delay: 1s; */
+    transition: all 1s 1s linear ;
+}
+.box:hover{
+    width: 400px;
+    height: 200px;
+    background-color: aqua;
+}
+.text{
+    width: 400px;
+    padding: 20px;
+    background-color: darkkhaki;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+}
+.text p {
+    transform: translateX(-400px);
+    transition: all 1s ;
+}
+.text:hover p {
+    transform: translate(0);
+}
+.text h2{
+    transform: translateY(-300px);
+    transition: all 1s ;
+}
+.text:hover h2 {
+    transform: translateY(0);
+    color: blueviolet;
+}

@@ -1,0 +1,101 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: roboto;
+}
+.card {
+    
+    margin: auto;
+    width: 400px;
+    height: 260px;
+    margin: auto;
+    position: relative;
+    top: 200px;
+    display: flex;
+    box-shadow: 0 2px 4px rgb(0 0 0 / 15%);
+    border-radius: 4px;
+    transition: all 1s;
+    overflow: hidden;
+    
+}
+
+ul{
+    list-style-type: none;
+}
+    
+img {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+    
+    
+}
+.image{
+    
+    margin: auto;
+    transition: all 1s ;
+ 
+    position: absolute;
+  
+}
+.image img{
+    border-radius: 10px;
+    box-shadow: rgb(0 0 0 /15%);
+    width: 100%;
+
+    height: 100%;
+    object-fit: cover;
+    transition: all 1s;
+}
+.icon{
+    border-radius: 50%;
+    position: absolute;
+    top: 13px;
+    right: 16px;
+    cursor: pointer;
+
+}
+.content{
+    position:relative;
+    
+    transition: all 1s;
+}
+.click{
+    display: flex;
+    justify-content: space-evenly;
+    width: 80px;
+    height: 30px;
+    border-radius: 15%;
+    background-color: gray;
+    position: absolute;
+    left: 0px;
+    
+    cursor: pointer;
+    transition: all 1s ;
+    transform: translateY(230px);
+}
+.info{
+    
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+    margin: auto;
+    padding-top: 15px;
+    width: 400px;
+    height: 70px;
+    background-color: rgb(206, 161, 161);
+    
+   
+    transition: all 1s ;
+    transform: translateY(300px);
+ 
+}
+.card:hover .click{
+    transform: translateY(167px)
+}
+.card:hover .info{
+    transform: translateY(197px);
+}
