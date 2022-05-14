@@ -1,0 +1,42 @@
+.box{
+    width: 200px;
+    height: 100px;
+    background-color: tomato;
+    /* animation-name: animation;
+    animation-duration: 2s;
+    /* animation-iteration-count: infinite; */
+    /* animation-delay: 1s;
+    position: relative;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: forwards;  */
+    animation: animation 2s  0.5s infinite alternate;
+}
+@keyframes animation {
+    0% {
+       top: 0;
+       left: 0;
+        background-color: tomato;
+    }
+    25%{
+       top: 0;
+       left: 300px;
+        background-color: blue;
+    }
+    50% {
+        top:300px;
+        left: 300px;
+        
+        background-color: tomato;
+    }
+    75% {
+        top:300px;
+        left: 0;
+        background-color: aqua;
+    }
+    100%{
+        top: 0;
+        left: 0;
+         background-color: rgba(0, 0, 0, 0.493);
+
+    }
+        }        

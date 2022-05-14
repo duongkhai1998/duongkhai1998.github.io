@@ -1,0 +1,29 @@
+.banner{
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0 ;
+    overflow: hidden;
+    
+}
+.banner h2{
+    position: relative;
+    left: -200px;
+    opacity: 0;
+    animation: fade 2s 0.5s  forwards ;
+}
+@keyframes fade {
+    0% {left: -200px;}
+    100%{left: 0;opacity: 100%;}
+}
+.banner button{
+    position: relative;
+    top: 100px;
+    opacity: 0;
+    animation: animation 2s 0.5s forwards;
+}
+@keyframes animation{
+    0%{top:100px;}
+    50%{top: 50px;opacity: 50%;}
+    100%{top: 0px;opacity: 100%;}
+}

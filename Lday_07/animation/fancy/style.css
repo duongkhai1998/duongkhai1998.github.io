@@ -1,0 +1,12 @@
+img{
+    max-width: 100%;
+}
+.container{
+    width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+.container a {
+    flex-basis: 300px;
+}
