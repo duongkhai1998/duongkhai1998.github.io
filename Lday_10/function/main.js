@@ -1,73 +1,98 @@
-// dinh nghia function 
-function sayHello() {
-    console.log("xin chao ");
-}
-sayHello();
-// function 1 tham so  
-function sayHelloWithname(name){
-    console.log(`xin chao ${name}`);
-}
-sayHelloWithname("khai");
-// function 2 tham so 
-function showInfo(name, year) {
-    console.log(`xin chao,toi ten la ${name},nam nay toi ${2022-year} tuoi. `);  
-}
- showInfo("khai",1998);
- showInfo("duong",1991);
-
-
-
-//  function co tra ve ket qua 
-//  vi du tinh tong 2 so 
-function sum (a, b){
-    let result = a + b ;
-    console.log(a)
-    console.log(b)
-    // nhung cau lenh dat sau tu khoa return se ko dc thuc thi 
-    return result;
-    console.log(a)
-    console.log(b)
-}
-
-let data = sum(3, 4);
-console.log(data);
-console.log(sum(10,20))
-console.log(sum(data, 9));
+// bt1
+function check_number(number)
+{
+    if (number % 3 == 0 && number % 5 == 0){
+       console.log('fizbuzz');
+    }
+    else if (number % 5 == 0) {
+      console.log( 'fizz');
+    }
+    else if (number % 3 == 0){
+        console.log('buzz')
+    }
   
-
-//  default parameter 
-function sum1 (a = 10, b = 20){
-    let result = a + b ;
-    return result; }
-console.log(sum1(4))    
-
-
-
-function sayHi(){
-    console.log("xin chao")
-
+       
+    }
+    check_number(15)
+    check_number(9)
+    check_number(10)
+// bt2
+function giai_pt_bac_nhat(a, b)
+{
+    if (a == 0 && b == 0){
+        console.log('Phương trình vô số nghiệm');
+    }
+    else if (a != 0 && b == 0){
+        console.log('Phương trình có nghiệm x = 0');
+    }
+    else if (a == 0 && b != 0){
+        console.log("Phương trình vô nghiệm");
+    }
+    else {
+        console.log('Phương trình có nghiệm x = ' + (-b/a));
+    }
 }
-
-
-function sayHi3(name){
-    console.log(`my name is ${name}`);
+giai_pt_bac_nhat(2,0)
+giai_pt_bac_nhat(0,0)
+giai_pt_bac_nhat(2,7)
+giai_pt_bac_nhat(0,4)
+// bt3
+function ptbac2(a, b,c)
+{
+    if(a==0){
+        if(b==0){
+            console.log('pt vo nghiem')
+        } else {
+        x = -c/b;
+        console.log('pt co 1 nghiem x =' + x);}
+    }
+    else{
+        if(a!=0){
+            delta = b*b - 4*a*c;
+            if(delta == 0){
+                x = -b/(2*a);
+                console.log('pt co nghiem kep là:');
+                console.log('x = ' + x);
+            }
+            else
+            {
+                x1 =  (-b + Math.sqrt(delta))/(2*a);
+                x2 =  (-b - Math.sqrt(delta))/(2*a);
+                console.log('Phương trình có hai nghiệm phân biệt là:');
+                console.log('x1 = ' + x1);
+                console.log('x2 = ' + x2);
+            }
+        }
+    }
 }
-sayHi3("khai")
+ptbac2(2,6,1)
+ptbac2(0,0,3)
+ptbac2(0,2,4)
 
-function sum2(a,b){
-    return(a+b);
+// bt4 
+function tinhnamnhuan(year){
+if( year % 400 == 0 ){
+    console.log('la nam nhuan')
 }
-console.log(sum(4,7))
-function pow(a){
-    return(Math.pow(a,2))
+else if(year % 4 == 0 && year % 100 != 0){
+    console.log('ko phai nam nhuan')
 }
-console.log(pow(4))
+else{
+    console.log('ko phai nam nhuan')
+}
+}
+tinhnamnhuan(2000)
+tinhnamnhuan(1999)
 
-function calt(year){
-    return(Math.ceil(year/100))
-}
-console.log(`the ki  ${calt(2022)}`)
-console.log(`the ki  ${calt(1701)}`)
 
-// bien global : dinh nghia ben ngoai function 
-let age = 24 ;
+// bt 5
+function tinhbmi(kg,cao){
+return kg / Math.pow(cao,2) }
+
+console.log('chi so BMI la' + ' ' +tinhbmi(68, 1.65))
+console.log('chi so BMI la' + ' ' +tinhbmi(56, 1.73))
+// bt6
+function tinhdof(doC){
+    return doC * 1.8 + 32
+}
+console.log('do F = ' + tinhdof(32))
