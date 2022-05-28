@@ -16,11 +16,15 @@ function checkStringExist(str,substr){
  console.log(rutnhanchuoi('khaiduon'))
  console.log(rutnhanchuoi('khaiduonng1998'))
 //  bt3
-function checkData(stringS){
-    let  stringSFormat = stringS.toLowerCase().replace(/\s/g,'')
-    return  [stringSFormat].join('')
-      }
-console.log(checkData('KHAI duong van'))
+function kiemTraChuoi(str){
+    
+    str = str.toLowerCase().replace(/\s/g,'')
+   
+    return str === str.split('').reverse().join('')
+  }
+ console.log(kiemTraChuoi('race    cAr        '))
+ console.log(kiemTraChuoi('tech mater'))
+
 // bt5
 function convertSnakecase(key) {
     let result = key.replace( /([A-Z][a-z])/g, " $1" );
