@@ -32,4 +32,4 @@ function convertSnakecase(key) {
  }
  
  console.log(convertSnakecase('HELLO world'));
- console.log(convertSnakecase('XIN Chao CAC BAN'));
+ console.log(convertSnakecase(' Chao CAC BAN'));

@@ -26,16 +26,16 @@ function checkStringExist(str,substr){
  }
   
        function checkData(stringS){
-     let  stringSFormat = stringS.toLowerCase().replace(/\s/g,'')
+     let  stringSFormat = stringS.toLowerCase().replace(/\s/,'')
      return  [stringSFormat].join('')
        }
  console.log(checkData('KHAI duong van'))
  
  function kiemTraChuoi(str){
     
-    str = str.toLowerCase().replace(/\s/g,'')
+    str = str.toLowerCase().replaceAll(" ","")
    
-    return str === str.split('').reverse().join('')
+    return str == str.split('').reverse().join('')
   }
  console.log(kiemTraChuoi('race    cAr        '))
  console.log(kiemTraChuoi('tech mater'))
@@ -54,30 +54,15 @@ function Sapxep(numBer){
     let num = numBer.toString()
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 console.log(toSnakeCase('some-mixed_string With spaces_underscores-and-hyphens'));
 console.log(toSnakeCase('AllThe-small Things'));
 console.log(toSnakeCase('IAmListeningToFMWhileLoadingDifferentURLOnMyBrowserAndAlsoEditingSomeXMLAndHTML'));
 function convertSnakecase(key) {
-    let result = key.replace( /([A-Z][a-z])/g, " $1" );
-    return result.split(' ').join('_').toLowerCase();
- }
+  
+   key = key.toLowerCase().replaceAll(" ","_")
+    return key 
+
+}
  
  console.log(convertSnakecase('HELLO world'));
  console.log(convertSnakecase('XIN Chao CAC BAN'));
