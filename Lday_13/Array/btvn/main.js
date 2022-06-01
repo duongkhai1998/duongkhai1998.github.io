@@ -1,3 +1,4 @@
+// bt1
 function maxElement(array) {
   let max = [];
 
@@ -9,8 +10,8 @@ function maxElement(array) {
   return max;
 }
 
-console.log(maxElement([1, 4, 2, 6, 9, 3]));
-
+console.log(maxElement([1, 4, 5, 1, 7, 3]));
+// bt2
 function minElement(array) {
   let min = array[0];
 
@@ -22,7 +23,7 @@ function minElement(array) {
   return min;
 }
 console.log(minElement([2, 4, 66, 3, 1]));
-
+// bt3
 function checkEvenArrAsc(arr) {
   for (let i = 0; i < arr.length; i++) {
     arr[i]=arr[i]%2
@@ -32,11 +33,12 @@ function checkEvenArrAsc(arr) {
 }
 
 checkEvenArrAsc([2, 4, 9, 7]);
+// bt4 
 function repeat1(str) {
   return str.repeat(10);
 }
 console.log(repeat1("a"));
-
+// bt5
 function repeat2(str) {
   let result = "";
   for (let i = 0; i < 10; i++) {
