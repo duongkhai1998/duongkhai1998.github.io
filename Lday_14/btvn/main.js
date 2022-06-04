@@ -11,12 +11,7 @@ console.log(sortStudents(['huy','tuan','khai','nhi']))
     console.log(shuffleArray);
 
 
-    function shuffle(arr){
-         arr = 0.5 - Math.random()
-         
-         return arr.sort()
-    }
-console.log(shuffle([1,4,2,5,6,7]))
+
 // bt3
 function symmetricDifference(arr,brr) {
     var newArr = []
