@@ -44,8 +44,8 @@ let func = sum2(10,20);
 console.log(func)
 
 
-// let data = func(30)
-// console.log(data)
+//  let data = func(30)
+//  console.log(data)
 let data = func((10,20),(30))
 console.log(data)
 
