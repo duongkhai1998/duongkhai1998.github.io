@@ -21,7 +21,7 @@ li.forEach((ele) => {
 
 // bt3 Sử dụng javascript để thực hiện những công việc sau
 
-const list = document.getElementById("list");
+const list = document.querySelectorAll("#list li");
 console.log(list);
 // Thêm 3 thẻ <li> có nội dung Item 8, Item 9, Item 10 vào cuối danh sách
 const li8 = document.createElement("li");
@@ -36,28 +36,18 @@ console.log(li8);
 console.log(li9);
 console.log(li10);
 
-const li7 = document.querySelector("#list li:nth-child(7)");
-console.log(li7);
-li7.appendChild(li8);
+list[6].appendChild(li8);
 li8.appendChild(li9);
 li9.appendChild(li10);
 // Sửa nội dung cho thẻ <li> 1 thành màu đỏ (color)
-const li1 = document.querySelector("#list li:nth-child(1)");
-console.log(li1);
-li1.style.color = "red";
+list[0].style.color = "red";
 // Sửa background cho thẻ <li> 3 thành màu xanh (background-color)
-const li3 = document.querySelector("#list li:nth-child(3)");
-console.log(li3);
-li3.style.backgroundColor = "green";
+list[2].style.backgroundColor = "green";
 // Remove thẻ <li> 4
-const li4 = document.querySelector("#list li:nth-child(4)");
-
-// list.removeChild(li4);
+// list[3].parentNode.removeChild(list[3])
 
 // Thêm thẻ <li> mới thay thế cho thẻ <li> 4 bị xóa ở bước trước, thẻ <li> mới có nội dung bất kỳ
 const newLi = document.createElement("li");
-newLi.innerHTML = "replace li4";
+newLi.innerHTML = "THAY THE";
 console.log(newLi);
-list.replaceChild(newLi, li4);
-
-
+list[3].parentNode.replaceChild(newLi, list[3]);
