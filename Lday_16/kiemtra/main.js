@@ -63,7 +63,6 @@ function findLongestWord(str) {
 
 console.log(findLongestWord(["khaii", "tuan", "tu"]));
 
-//   bt7
 
 // bt6 Bài 6 (2 điểm). Cho mảng users như sau:
 
@@ -96,3 +95,17 @@ const sortbyAge = (arr) => {
   return arr.sort((a, b) => a.age - b.age);
 };
 console.log(sortbyAge(users));
+//   bt7
+function getCountElement(arr) {
+  object = {}
+  for (let element in arr) {
+      let key = arr[element];
+      if (object[key] === undefined) {
+          object[key] = 1;
+      } else {
+          object[key] = object[key] + 1;
+      }
+  }
+  return object;
+}
+console.log(getCountElement(["one", "two", "three", "one", "one", "three"]))
