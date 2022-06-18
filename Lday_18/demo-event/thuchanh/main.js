@@ -21,9 +21,9 @@ console.log(getHexColorRandom());
 const btn2 = document.getElementById("btn-2");
 console.log(btn2);
 
-btn2.onclick = () => {
+btn2.addEventListener('click',function() {
   text.style.color = getHexColorRandom();
-};
+});
 
 function getRgbRandom() {
   let r = Math.floor(Math.random() * 256);
