@@ -4,6 +4,9 @@ const productListEl= document.querySelector('.product-list')
 const seachFormInputEl=document.querySelector('.seach-form-input')
 const btnSeach= document.querySelector('.seach-form-button')
 
+function noticeVocher(){
+    alert('nhap ma giam gia:off10,0ff25,techmaster50 de duoc giam tuong ung 10,25,50%')
+}
 
 
 //Tìm kiếm sản phẩm
