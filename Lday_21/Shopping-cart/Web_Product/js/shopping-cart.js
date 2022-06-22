@@ -92,7 +92,7 @@ function minusCount(id, size) {
     setDataToLocalStorage(items)
     renderProduct(items)
 }
-let discountFactor = 0;
+let discountVocher = 0;
 
 const subTotalMoneyEl = document.getElementById("sub-total-money")
 const totalMoneyEl = document.getElementById("total-money")
@@ -105,7 +105,7 @@ function updateMoney() {
     
     subTotalMoneyEl.innerHTML = `${formatMoney(subTotalMoney)}`
 
-    let totalMoney = subTotalMoney*(1-discountFactor)
+    let totalMoney = subTotalMoney*(1-discountVocher)
     totalMoneyEl.innerHTML = `${formatMoney(totalMoney)}`
 }
 
@@ -136,7 +136,7 @@ let inputCode = discountInputEl.value
     for (code in vouchers) {
         if (inputCode.toLowerCase() === code.toLowerCase()) {
             alert("Ap dung ma giam gia thanh cong")
-            discountFactor = vouchers[code]
+            discountVocher = vouchers[code]
             updateMoney()
             return;
         }
