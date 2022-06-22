@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
+    
 }
 
 img {
@@ -100,8 +101,9 @@ ul {
 }
 
 #mainCarousel .carousel__button.is-next {
-    right: -1.5rem;
+    right: 4.5rem;
 }
+
 
 #mainCarousel .carousel__button:focus {
     outline: none;

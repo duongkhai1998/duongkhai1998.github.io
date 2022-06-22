@@ -1,48 +1,139 @@
 // detail.html?id=1 --> querystring
-// detail.html?id=1&name=product1&price=10000
-// lấy ra id trên url
-// truy cập các phần từ
-const breadcrumItemActive = document.querySelector('.breadcrumb-item.active')
-const nameEl = document.querySelector('.product-name')
-const priceEl = document.querySelector('.product-price')
-const sizeEl = document.querySelectorAll('.product-size')
-console.log(sizeEl)
-const descriptionEl = document.querySelector('.product-description')
+// detail.html?id=1&name=product1&price=1000000
+// Lấy ra id trên url
 let params = new URLSearchParams(window.location.search);
-let id = params.get('id')
-// biến  để lưu thông tin sản phẩm theo id
+let id = params.get("id");
+
+// Truy cập vào các thành phần
+const breadcrumbItemActive = document.querySelector(".breadcrumb-item.active");
+const nameEl = document.querySelector(".product-name");
+const priceEl = document.querySelector(".product-price");
+const sizeEl = document.querySelector(".product-size");
+const descriptionEl = document.querySelector(".product-description");
+const productSizeEl = document.querySelector(".product-size");
+
+const btnMinusCount = document.querySelector(".btn-minus-count");
+const btnPlusCount = document.querySelector(".btn-plus-count");
+const countEl = document.querySelector(".count");
+
+const btnAddToCart = document.querySelector(".btn-add-to-cart");
+const productDetail = document.getElementById("detail")
+const mainCarouselEl = document.getElementById("mainCarousel")
+const thumbCarouselEl = document.getElementById("thumbCarousel")
+console.log(productDetail)
+
+// Biến để lưu thông tin sản phẩm theo id
 let product;
-// kiểm tra id có tồn tại trên url hay ko
-// nếu ko có -->404
-if(id){
-product = products.find(p => p.id ==id)
-if(!product){
-    window.location.href = './404.html'
-}
-document.title = product.name
-breadcrumItemActive.innerText = product.name
-}else {
-    window.location.href = './404.html'
+let count = 1;
 
-}
-// hiển thị thông tin sản phẩm 
-const renderProduct = obj =>{
-    nameEl.innerText = obj.name
-    priceEl.innerText = obj.price 
-    descriptionEl.innerText = obj.description;
-     
-    const renderSize = arr =>{
-        sizeEl.innerHTML=''
-        let size = ''
-        for(let i = 0; i < arr.length;i++){
-            size += `<span class="border py-2 px-3 border-dark me-2">${arr[i]}</span>`
+// Kiểm tra xem id có tồn tại trên url hay không
+// Nếu không có -> 404
+if (id) {
+    product = products.find(p => p.id == id);
 
-        }
-        sizeEl.innerHTML = size
+    if (!product) {
+        window.location.href = "./404.html";
     }
-  
+
+    document.title = product.name;
+    breadcrumbItemActive.innerText = product.name;
+} else {
+    window.location.href = "./404.html";
 }
-renderProduct(product)
+
+// Hiển thị thông tin sản phẩm
+const renderProduct = obj => {
+    nameEl.innerText = obj.name;
+    priceEl.innerText = formatMoney(obj.price);
+    descriptionEl.innerText = obj.description;
+
+    // Hiển thị size (duyệt mảng -> cộng chuỗi -> hiển thị)
+    productSizeEl.innerHTML = product.sizes.map(size => {
+        return `<span class="border py-2 px-3 border-dark me-2" onclick="choseSize(this)">${size}</span>`
+    }).join("");
+
+    // Hiển thị hình ảnh (duyệt mảng -> cộng chuỗi -> hiển thị)
+}
+function renderImages(obj) {
+    mainCarouselEl.innerHTML = ""
+    thumbCarouselEl.innerHTML = ""
+    for (let image of obj.images) {
+        mainCarouselEl.innerHTML += `
+            <div class="carousel__slide" data-src="${image}" data-fancybox="gallery">
+                <img src="${image}"/>
+            </div>
+        `
+
+        thumbCarouselEl.innerHTML += `
+            <div class="carousel__slide">
+                <img class="panzoom__content" src="${image}" />
+            </div>
+        `
+    }
+}
+renderImages(product)
+
+// Chọn size;
+const choseSize = ele => {
+    // Cách 1:
+    // const selectedEl = document.querySelector(".selected");
+    // if(selectedEl) {
+    //     selectedEl.classList.remove("selected", "bg-dark", "text-white");
+    // }
+
+    // Cách 2:
+    const sizeEls = document.querySelectorAll(".product-size span");
+    Array.from(sizeEls).map(size => size.classList.remove("selected", "bg-dark", "text-white"));
+
+    ele.classList.add("selected", "bg-dark", "text-white");
+}
+
+// Tăng số lượng
+btnPlusCount.addEventListener("click", () => {
+    count++;
+    countEl.innerText = count;
+})
+
+// Giảm số lượng
+btnMinusCount.addEventListener("click", () => {
+    count--;
+    if (count < 1) {
+        count = 1;
+    }
+    countEl.innerText = count;
+})
+
+// Thêm vào giỏ hàng
+btnAddToCart.addEventListener("click", () => {
+    // Kiểm tra xem đã chọn size hay chưa
+    const sizeSelectedEl = document.querySelector(".product-size .selected");
+    if (!sizeSelectedEl) {
+        alert("Vui lòng chọn size trước khi thêm vào giỏ hàng");
+        return;
+    }
+
+    // Cấu trúc item thêm vào giỏ hàng
+    let item = {
+        id: product.id,
+        name: product.name,
+        price: product.price,
+        image: product.images[0],
+        count: count,
+        size: sizeSelectedEl.innerText,
+    }
+
+    // Thêm vào giỏ hàng
+    addItemToCart(item);
+    alert("Thêm vào giỏ hàng thành công");
+})
+
+// Format tiền - VND
+const formatMoney = number => {
+    return number.toLocaleString('it-IT', { style: 'currency', currency: 'VND' });
+}
+
+renderProduct(product);
+
 
 
 
