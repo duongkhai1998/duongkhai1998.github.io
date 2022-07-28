@@ -34,11 +34,9 @@ let time = 10
 let interval = setInterval(function(){
 time--;
 document.querySelector('.time').innerText =`${time}s`
-
 if(time == 0){
     // dung qua trinh lap lai
     clearInterval(interval);
     document.querySelector('.message').classList.remove('hide')
-
 }
 },1000)
