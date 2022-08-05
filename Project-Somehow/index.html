@@ -88,10 +88,12 @@
         <div class="navbar align-self-center d-flex">
 
 
-          <a class="nav-icon position-relative text-decoration-none" href="#">
-            <img class="pl-10" src="./assets/img/icon-user.webp" alt="" width="22">
-
-          </a>
+          <button data-bs-toggle="modal" data-bs-target="#staticBackdrop"  style="border: none; background-color: #fff;">
+            <a class="nav-icon position-relative text-decoration-none" href="#">
+              <img class="pl-10" src="./assets/img/icon-user.webp" alt="" width="22">
+  
+            </a>
+          </button>
           <a class="nav-icon position-relative text-decoration-none" href="#">
             <img src="./assets/img/icon-bag.webp" alt="" width="22">
             <span
@@ -102,6 +104,68 @@
 
     </div>
   </nav>
+  <div id="myModal" class="myModal-login">
+    <form>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-header">
+              <h5 class="modal-title-second" id="staticBackdropLabel">Đăng nhập</h5>
+              
+            </div>
+            <div class="modal-body-second">
+              <input  type="email" id="email" required placeholder="Email:">
+              <input  type="password" id="pass" required placeholder="Mật khẩu:">              
+            </div>
+            <div class="modal-footer-second">
+              
+              <button type="submit" id="btn-login" class="btn btn-primary-second">Đăng nhập</button>
+            </div>
+            <div class="suggest">
+              <p>Bạn chưa có tài khoản? <button class="btn-log" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop2">Đăng ký ngay</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="myModal" class="myModal-create">
+    <form action="">
+      <div class="modal fade modal-second" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-header">
+              <h5 class="modal-title-second" id="staticBackdropLabel">Tạo tài khoản</h5>
+              
+            </div>
+            <div class="modal-body-second">
+              <input type="text" required placeholder="Họ và tên:">
+              <input type="email" required placeholder="Email:">
+              <input type="password" required placeholder="Mật khẩu:">
+              <input type="password" required placeholder="Nhập lại mật khẩu:">
+              
+            </div>
+            <div class="accept">
+              <label class="accept-para"><input required type="checkbox">  Nhấn vào nút Đăng ký bên dưới đồng nghĩa với việc bạn đồng ý với các <mark>chính sách bảo mật</mark> và <mark>các điều khoản dịch vụ</mark> của chúng tôi</label>
+            </div>
+            <div class="modal-footer-second">
+              
+              <button type="submit"  class="btn btn-primary-second">Đăng ký</button>
+            </div>
+            <div class="suggest">
+               <button class="btn-create" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#staticBackdrop" >Bạn đã có tài khoản?</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
   <!-- Close Header -->
 
 
@@ -533,8 +597,8 @@
   <script src="assets/js/jquery-1.11.0.min.js"></script>
   <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
   <script src="assets/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/js/templatemo.js"></script>
-  <script src="assets/js/custom.js"></script>
+  <script src="assets/js/somehow.js"></script>
+  <script src="assets/js/main.js"></script>
   <!-- End Script -->
 </body>
 
