@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>SomeHow</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+ 
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.ico" />
+
+  <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+
+
+  
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+ 
+  <!-- Header -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+    <div class="container d-flex justify-content-between align-items-center">
+
+      <a class="navbar-brand text-success logo  align-self-center" href="index.html">
+        <img src="./assets/img/logo.webp" alt="#" width="90" height="44" />
+      </a>
+      
+
+      <button class="navbar-toggler"  type="button" data-bs-toggle="collapse" data-bs-target="#somehow_main_nav" aria-controls="somehow_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+        id="somehow_main_nav">
+        <div class="flex-fill   ">
+          <ul class=" navbar-nav justify-content-center mx-lg-auto pt-0 ">
+            <li class="nav-item ">
+              <a class="nav-link text-nowrap" href="index.html ">TRANG CHỦ</a>
+            </li>
+            <li class="nav-item dropdown  ">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                SẢN PHẨM
+              </a>
+              <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="./shop.html">ÁO</a></li>
+                <li><a class="dropdown-item" href="#">QUẦN</a></li>
+                <li><a class="dropdown-item" href="#">UNDERWEAR</a></li>
+                <li><a class="dropdown-item" href="#">PHỤ KIỆN</a></li>
+             
+              </ul>
+            </li>
+
+            <li class="nav-item dropdown  ">
+              <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                aria-expanded="false">
+                HƯỚNG DẪN- CHÍNH SÁCH
+              </a>
+              <ul class="dropdown-menu ">
+                <li><a class="dropdown-item " href="#">CHƯƠNG TRÌNH MEMBERSHIP</a></li>
+                <li><a class="dropdown-item" href="#">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+
+              </ul>
+            </li>
+
+            <li class="nav-item text-nowrap ">
+              <a class="nav-link" href="contact.html">HỆ THỐNG CỬA HÀNG</a>
+            </li>
+            <li class="nav-item text-nowrap  ">
+              <a class="nav-link" href="contact.html">GIỚI THIỆU</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="navbar justify-content-lg-between justify-content-start">
+          
+
+          <a class="icon-bag   nav-icon position-relative text-decoration-none" href="./giohang.html">
+            <img src="./assets/img/icon-bag.webp" alt="" width="22">
+            <span
+              class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+          </a>
+          <a class="icon-user nav-icon position-relative text-decoration-none" href="#" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">
+            <img class="pl-10" src="./assets/img/icon-user.webp" alt="" width="22">
+          </a>
+        </div>
+
+
+
+      </div>
+  </nav>
+  <div id="myModal" class="myModal-login">
+    <form>
+      <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-header">
+              <h5 class="modal-title-second" id="staticBackdropLabel">Đăng nhập</h5>
+
+            </div>
+            <div class="modal-body-second">
+              <input type="email" id="email" required placeholder="Email:">
+              <input type="password" id="pass" required placeholder="Mật khẩu:">
+            </div>
+            <div class="modal-footer-second">
+
+              <button type="submit" id="btn-login" class="btn btn-primary-second">Đăng nhập</button>
+            </div>
+            <div class="suggest">
+              <p>Bạn chưa có tài khoản? <button class="btn-log" data-bs-dismiss="modal" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop2">Đăng ký ngay</button></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <div id="myModal" class="myModal-create">
+    <form action="">
+      <div class="modal fade modal-second" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+        tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-close">
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-header">
+              <h5 class="modal-title-second" id="staticBackdropLabel">Tạo tài khoản</h5>
+
+            </div>
+            <div class="modal-body-second">
+              <input type="text" required placeholder="Họ và tên:">
+              <input type="email" required placeholder="Email:">
+              <input type="password" required placeholder="Mật khẩu:">
+              <input type="password" required placeholder="Nhập lại mật khẩu:">
+
+            </div>
+            <div class="accept">
+              <label class="accept-para"><input required type="checkbox"> Nhấn vào nút Đăng ký bên dưới đồng nghĩa với
+                việc bạn đồng ý với các <mark>chính sách bảo mật</mark> và <mark>các điều khoản dịch vụ</mark> của chúng
+                tôi</label>
+            </div>
+            <div class="modal-footer-second">
+
+              <button type="submit" class="btn btn-primary-second">Đăng ký</button>
+            </div>
+            <div class="suggest">
+              <button class="btn-create" data-bs-dismiss="modal" data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop">Bạn đã có tài khoản?</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  </header>
+  <!-- Close Header -->
+  <div id="somehow-carousel" class="carousel slide " data-bs-ride="carousel">
+    <ol class="carousel-indicators">
+      <li data-bs-target="#somehow-carousel" data-bs-slide-to="0" class="active"></li>
+      <li data-bs-target="#somehow-carousel" data-bs-slide-to="1"></li>
+      <li data-bs-target="#somehow-carousel" data-bs-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/img/slideshow_1.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/slideshow_2.webp" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="./assets/img/slideshow_3.webp" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <a class="carousel-control-prev text-decoration-none w-auto ps-3" href="#somehow-carousel" role="button"
+      data-bs-slide="prev">
+      <i class="fas fa-chevron-left"></i>
+    </a>
+    <a class="carousel-control-next text-decoration-none w-auto pe-3" href="#somehow-carousel" role="button"
+      data-bs-slide="next">
+      <i class="fas fa-chevron-right"></i>
+    </a>
+  </div>
+
+
+
+
+
+
+  
+  <!-- End Banner Hero -->
+
+  <!-- Start Categories of The Month -->
+  <section class="container py-5">
+    <div class="row text-center pt-3  ">
+      <div class="col-lg-6 m-auto">
+        <h3 class="h3 ">BỘ SƯU TẬP</h3>
+
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-6 col-md-3 p-5 mt-3">
+        <a href="#"><img src="./assets/img/ao/ao1.png" class="rounded-circle  img-fluid border"></a>
+        <h3 class="h5 text-center mt-3 mb-3">ÁO</h3>
+      
+      </div>
+      <div class="col-6 col-md-3 p-5 mt-3">
+        <a href="#"><img src="./assets/img/quan/simicategory_filename_tablet1629471968.png"
+            class="rounded-circle img-fluid background-color: antiquewhite; "></a>
+        <h3 class="h5 text-center mt-3 mb-3">QUẦN</h3>
+      
+      </div>
+      <div class="col-6 col-md-3 p-5 mt-3">
+        <a href="#"><img src="./assets/img/quan lot/quan lot.jpg"
+            class="rounded-circle img-fluid background-color: antiquewhite; "></a>
+        <h3 class="h5 text-center mt-3 mb-3">UNDERWEAR</h3>
+      
+      </div>
+      <div class="col-6 col-md-3 p-5 mt-3">
+        <a href="#"><img src="./assets/img/phu kien/simicategory_filename_tablet1629472400.png"
+            class="rounded-circle img-fluid border" style="border-radius: 20px;"></a>
+        <h3 class="h5 text-center mt-3 mb-3 text-nowrap">PHỤ KIỆN</h3>
+      
+      </div>
+    </div>
+  </section>
+  <!-- End Categories of The Month -->
+ <div class="container-fluid">
+  <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="./assets/img/new arrivals.webp" class="d-block w-100" alt="...">
+      </div>
+
+    </div>
+  </div>
+ </div>
+
+  <section id="best">
+    <div class="container py-4 ">
+      <div class="row">
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+        <div class="col-6 col-md-3 col-sm-6 ">
+          <div class="card mb-4 product-wap  ">
+            <div class="card border-0  ">
+              <img class="card-img" src="./assets/img/quan/quan3.jpg">
+              <div class="card-img-overlay product-overlay d-flex align-items-center justify-content-center">
+                <ul class="list-unstyled">
+
+                  
+                  <li><a  href="shop-single.html"><li><a  href="shop-single.html"> <button class="btn btn-click text-dark">MUA NGAY</button></a></li></a></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+          <div class="card-content pt-0">
+            <h4 class="name">Quần Đùi
+              </h4>
+            <h4 class="price">380.000 VNĐ</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+
+  <div class="button-more d-flex justify-content-center mb-4">
+    <button type="button" class="btn btn-outline-dark">XEM THÊM</button>
+  </div>
+
+  <!-- Start Footer  -->
+
+
+  <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">
+            HÀ NỘI
+          </h3>
+          <div class="footer-content">
+            <div class="footer-menu">
+              <p>79 Nguyễn Khang, Trung Hòa - Cầu Giấy</p>
+              <p>43 Khâm Thiên - Quận Đống Đa</p>
+              <p>296 Nguyễn Trãi - Quận Nam Từ Liêm</p>
+              <p>24 Trần Phú - Quận Hà Đông</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">
+            TP.HỒ CHÍ MINH
+          </h3>
+          <div class="footer-content">
+            <div class="footer-menu">
+              <p>539 Sư Vạn Hạnh Phường 13 - Quận 10</p>
+              <p>332 Cao Đạt Phường 1 - Quận 5</p>
+              <p>379 Hoàng Văn Th - P2 - Q.Tân Bình</p>
+              <p>42 Trần Quang Khải - Tân Định - Quận 1</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">
+            thông tin
+          </h3>
+          <div class="footer-content">
+            <div class="footer-menu ">
+              <p><a class="text-decoration-none" href="/index.html">Trang Chủ</a></p>
+              <p><a class="text-decoration-none" href="/category.html">Danh sách sản phẩm</a></p>
+              <p><a class="text-decoration-none" href="/news.html">Tin tức</a></p>
+              <p><a class="text-decoration-none" href="/about.html">Chúng tôi</a></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">Liên Hệ</h3>
+          <div class="footer-content">
+            <p class="text-dark"> <i class="fas fa-envelope me-3 text-dark"></i> info@somehow.com</p>
+
+            <p class="text-dark"><i class="fas fa-phone me-3 "></i> +84 869623198</p>
+
+            <h3 class="footer-tittle">
+              PHƯƠNG THỨC THANH TOÁN
+            </h3>
+            <img class="mt-1" src="./assets/img/img-payment.webp" alt="tt ">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+
+
+
+  <!-- Start Script -->
+  <script src="assets/js/jquery-1.11.0.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/somehow.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- End Script -->
+</body>
+
+</html>

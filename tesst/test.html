@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="assets/css/footer.css">
+  <link rel="stylesheet" href="assets/css/header.css">
+  <link rel="stylesheet" href="./assets/css/chitiet.css">
+
+
+  
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="slick/slick.css"/>
+
+<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
+    <title>Chi Tiết Sản Phẩm</title>
+  </head>
+  <body>
+    <!-- Header -->
+ <header>
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+  
+        <a class="navbar-brand text-success logo h1 align-self-center" href="index.html">
+          <img src="./assets/img/logo.webp" alt="#" width="90" height="44" />
+        </a>
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#somehow_main_nav" aria-controls="somehow_main_nav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="align-self-center collapse navbar-collapse flex-fill  d-lg-flex justify-content-lg-between"
+          id="somehow_main_nav">
+          <div class="flex-fill   ">
+            <ul class=" navbar-nav justify-content-center mx-lg-auto pt-0 ">
+              <li class="nav-item ">
+                <a class="nav-link text-nowrap" href="index.html ">TRANG CHỦ</a>
+              </li>
+              <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  SẢN PHẨM
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="./shop.html">ÁO</a></li>
+                  <li><a class="dropdown-item" href="#">QUẦN</a></li>
+                  <li><a class="dropdown-item" href="#">UNDERWEAR</a></li>
+                  <li><a class="dropdown-item" href="#">PHỤ KIỆN</a></li>
+               
+                </ul>
+              </li>
+  
+              <li class="nav-item dropdown  ">
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                  aria-expanded="false">
+                  HƯỚNG DẪN- CHÍNH SÁCH
+                </a>
+                <ul class="dropdown-menu ">
+                  <li><a class="dropdown-item " href="#">CHƯƠNG TRÌNH MEMBERSHIP</a></li>
+                  <li><a class="dropdown-item" href="#">CHÍNH SÁCH ĐỔI TRẢ</a></li>
+  
+                </ul>
+              </li>
+  
+              <li class="nav-item text-nowrap ">
+                <a class="nav-link" href="contact.html">HỆ THỐNG CỬA HÀNG</a>
+              </li>
+              <li class="nav-item text-nowrap  ">
+                <a class="nav-link" href="contact.html">GIỚI THIỆU</a>
+              </li>
+  
+            </ul>
+          </div>
+          <div class="navbar justify-content-lg-between justify-content-start">
+  
+  
+            <a class="nav-icon position-relative text-decoration-none" href="./giohang.html">
+              <img src="./assets/img/icon-bag.webp" alt="" width="22">
+              <span
+                class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark">0</span>
+            </a>
+            <a class="nav-icon position-relative text-decoration-none" href="#" data-bs-toggle="modal"
+              data-bs-target="#staticBackdrop">
+              <img class="pl-10" src="./assets/img/icon-user.webp" alt="" width="22">
+            </a>
+          </div>
+  
+  
+  
+        </div>
+    </nav>
+    <div id="myModal" class="myModal-login">
+      <form>
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-close">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-header">
+                <h5 class="modal-title-second" id="staticBackdropLabel">Đăng nhập</h5>
+  
+              </div>
+              <div class="modal-body-second">
+                <input type="email" id="email" required placeholder="Email:">
+                <input type="password" id="pass" required placeholder="Mật khẩu:">
+              </div>
+              <div class="modal-footer-second">
+  
+                <button type="submit" id="btn-login" class="btn btn-primary-second">Đăng nhập</button>
+              </div>
+              <div class="suggest">
+                <p>Bạn chưa có tài khoản? <button class="btn-log" data-bs-dismiss="modal" data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop2">Đăng ký ngay</button></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+    <div id="myModal" class="myModal-create">
+      <form action="">
+        <div class="modal fade modal-second" id="staticBackdrop2" data-bs-backdrop="static" data-bs-keyboard="false"
+          tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <div class="modal-close">
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-header">
+                <h5 class="modal-title-second" id="staticBackdropLabel">Tạo tài khoản</h5>
+  
+              </div>
+              <div class="modal-body-second">
+                <input type="text" required placeholder="Họ và tên:">
+                <input type="email" required placeholder="Email:">
+                <input type="password" required placeholder="Mật khẩu:">
+                <input type="password" required placeholder="Nhập lại mật khẩu:">
+  
+              </div>
+              <div class="accept">
+                <label class="accept-para"><input required type="checkbox"> Nhấn vào nút Đăng ký bên dưới đồng nghĩa với
+                  việc bạn đồng ý với các <mark>chính sách bảo mật</mark> và <mark>các điều khoản dịch vụ</mark> của chúng
+                  tôi</label>
+              </div>
+              <div class="modal-footer-second">
+  
+                <button type="submit" class="btn btn-primary-second">Đăng ký</button>
+              </div>
+              <div class="suggest">
+                <button class="btn-create" data-bs-dismiss="modal" data-bs-toggle="modal"
+                  data-bs-target="#staticBackdrop">Bạn đã có tài khoản?</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+   </header>
+    <!-- Close Header -->
+   <!-- Open Content -->
+   <section class="address">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="slider-sync">
+              <div class="slider-for">
+                  <div>
+                      <img src="https://canifa.com/img/1000/1500/resize/5/t/5ts22s014-se114-2-thumb.jpg" alt="">
+                  </div>
+                  <div>
+                      <img src="https://canifa.com/img/1000/1500/resize/5/t/5ts22s014-se114-2-thumb.jpg" alt="">
+                  </div>
+                  <div>
+                      <img src="../public/img/Jacket/jacket3.png" alt="">
+                  </div>
+                  <div>
+                      <img src="../public/img/Jacket/jacket4.png" alt="">
+                  </div>
+                  <div>
+                      <img src="../public/img/Jacket/jacket5.png" alt="">
+                  </div>
+              </div>
+          
+              <ul class="slider-nav">
+                  <li>
+                      <img src="https://canifa.com/img/1000/1500/resize/5/t/5ts22s014-se114-2-thumb.jpg" alt="" width="100%">
+                  </li>
+                  <li>
+                      <img src="../public/img/Jacket/jacket2.png" alt="" width="100%">
+                  </li>
+                  <li>
+                      <img src="../public/img/Jacket/jacket3.png" alt="" width="100%">
+                  </li>
+                  <li>
+                      <img src="../public/img/Jacket/jacket4.png" alt="" width="100%">
+                  </li>
+                  <li>
+                      <img src="../public/img/Jacket/jacket5.png" alt="" width="100%">
+                  </li>
+              </ul>
+          </div>
+        </div>
+        <div class="col-lg-6 ">
+          <div id="detail">
+              <h2 class="product-name fs-3">Áo thun siêu đẹp</h2>
+              <p class="product-price text-danger fs-4 fw-bold mb-4">600,000đ</p>
+              <div class="size d-flex">
+                <span class="fw-bold me-3">Kích cỡ:</span>
+              <div class="product-size mb-4">
+                  <span class="border py-2 px-3 border-dark me-2" >M</span>
+                  <span class="border py-2 px-3 border-dark me-2">S</span>
+                  <span class="border py-2 px-3 border-dark me-2">L</span>
+                  <span class="border py-2 px-3 border-dark me-2">XL</span>
+              </div>
+              </div>
+              <div class="d-flex  align-items-center mb-4 flex-wrap">
+                <span class="fw-bold me-3">Số lượng:</span>
+                  <span class="count-product d-inline-block me-3">
+                      <span class="rounded-circle px-2 d-inline-block fw-bold btn-minus-count">-</span>
+                      <span class="count py-1 px-2 d-inline-block fw-bold ">1</span>
+                      <span class="rounded-circle  px-2 d-inline-block fw-bold btn-plus-count">+</span>
+                  </span>
+                  <button class="btn btn-add-to-cart"><a href="./cart.html">Thêm vào giỏ hàng</a></button>
+              </div>
+              <div class="item-detail d-flex text-center justify-content-between">
+                  <p>Freeship đơn hàng giá trị trên 1 triệu đồng</p>
+                  <p>Đổi hàng chưa qua sử dụng trong vòng 30 ngày
+                  </p>
+              </div>
+              <div class="product-description">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem sint impedit
+                      reiciendis ducimus, ipsa quo quibusdam dolorum quisquam magnam dolore eius cum. Sed
+                      nihil itaque dolorum impedit nostrum vel a distinctio? Molestias voluptate soluta
+                      repellat ullam? Magni, laudantium! Excepturi corrupti eaque, dolorum voluptatem nostrum
+                      nemo. Quo nam itaque officia dolores.</p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, dignissimos?
+                      Exercitationem iure architecto temporibus aliquam, numquam, culpa aperiam placeat
+                      voluptatem tempora nemo alias? Similique, rerum eius. Et provident voluptatem tenetur.
+                  </p>
+              </div>
+              <div class="description-image">
+                  <img src="../public/img/choose-size.png" alt="">
+              </div>
+          </div>
+      </div>
+      </div>   
+    </div>
+  </section>
+<!-- Close Content -->
+
+<!-- Start Article -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-left p-2 pb-3">
+            <h4>Related Products</h4>
+        </div>
+
+        <!--Start Carousel Wrapper-->
+        <div id="carousel-related-product">
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_08.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Red Clothing</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$20.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_09.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">White Shirt</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$25.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_10.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$45.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_11.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Black Fashion</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$60.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_08.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li class="">M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$80.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_09.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$110.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_10.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$125.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_11.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$160.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_08.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$180.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_09.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$220.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_10.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$250.00</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 pb-3">
+                <div class="product-wap card rounded-0">
+                    <div class="card rounded-0">
+                        <img class="card-img rounded-0 img-fluid" src="assets/img/shop_11.jpg">
+                        <div class="card-img-overlay rounded-0 product-overlay d-flex align-items-center justify-content-center">
+                            <ul class="list-unstyled">
+                                <li><a class="btn btn-success text-white" href="shop-single.html"><i class="far fa-heart"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="far fa-eye"></i></a></li>
+                                <li><a class="btn btn-success text-white mt-2" href="shop-single.html"><i class="fas fa-cart-plus"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="card-body">
+                        <a href="shop-single.html" class="h3 text-decoration-none">Oupidatat non</a>
+                        <ul class="w-100 list-unstyled d-flex justify-content-between mb-0">
+                            <li>M/L/X/XL</li>
+                            <li class="pt-2">
+                                <span class="product-color-dot color-dot-red float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-blue float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-black float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-light float-left rounded-circle ml-1"></span>
+                                <span class="product-color-dot color-dot-green float-left rounded-circle ml-1"></span>
+                            </li>
+                        </ul>
+                        <ul class="list-unstyled d-flex justify-content-center mb-1">
+                            <li>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-warning fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                                <i class="text-muted fa fa-star"></i>
+                            </li>
+                        </ul>
+                        <p class="text-center mb-0">$300.00</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+</section>
+<!-- End Article -->
+   
+ <!-- Start Footer  -->
+
+
+ <footer id="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">
+            HÀ NỘI
+          </h3>
+          <div class="footer-content">
+            <div class="footer-menu">
+              <p>79 Nguyễn Khang, Trung Hòa - Cầu Giấy</p>
+              <p>43 Khâm Thiên - Quận Đống Đa</p>
+              <p>296 Nguyễn Trãi - Quận Nam Từ Liêm</p>
+              <p>24 Trần Phú - Quận Hà Đông</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">
+            TP.HỒ CHÍ MINH
+          </h3>
+          <div class="footer-content">
+            <div class="footer-menu">
+              <p>539 Sư Vạn Hạnh Phường 13 - Quận 10</p>
+              <p>332 Cao Đạt Phường 1 - Quận 5</p>
+              <p>379 Hoàng Văn Th - P2 - Q.Tân Bình</p>
+              <p>42 Trần Quang Khải - Tân Định - Quận 1</p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">
+            thông tin
+          </h3>
+          <div class="footer-content">
+            <div class="footer-menu ">
+              <p><a class="text-decoration-none" href="/index.html">Trang Chủ</a></p>
+              <p><a class="text-decoration-none" href="/category.html">Danh sách sản phẩm</a></p>
+              <p><a class="text-decoration-none" href="/news.html">Tin tức</a></p>
+              <p><a class="text-decoration-none" href="/about.html">Chúng tôi</a></p>
+
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-12">
+          <h3 class="footer-tittle">Liên Hệ</h3>
+          <div class="footer-content">
+            <p class="text-dark"> <i class="fas fa-envelope me-3 text-dark"></i> info@somehow.com</p>
+
+            <p class="text-dark"><i class="fas fa-phone me-3 "></i> +84 869623198</p>
+
+            <h3 class="footer-tittle">
+              PHƯƠNG THỨC THANH TOÁN
+            </h3>
+            <img class="mt-1" src="./assets/img/img-payment.webp" alt="tt ">
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </footer>
+  <!-- End Footer -->
+
+
+
+
+  <!-- Start Script -->
+  <script src="assets/js/jquery-1.11.0.min.js"></script>
+  <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
+  <script src="assets/js/bootstrap.bundle.min.js"></script>
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript" src="slick/slick.min.js"></script>
+  <script src="assets/js/somehow.js"></script>
+  <script src="assets/js/main.js"></script>
+  <!-- End Script -->
+   
+  </body>
+</html>
