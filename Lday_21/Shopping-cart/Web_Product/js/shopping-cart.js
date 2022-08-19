@@ -3,61 +3,7 @@ function formatMoney(num) {
 }
 
 
-let items = getDataFromLocalStorage()
-const productListEl = document.querySelector(".product-list")
-
-function renderProduct(arr) {
-    productListEl.innerHTML = ""
-
-    if (arr.length === 0) {
-        return;
-    }
-
-    document.querySelector(".message").classList.add("d-none")
-    for (let item of arr) {
-        productListEl.innerHTML += `
-            <div class="product-item d-flex border mb-4">
-                <div class="image">
-                    <img src="${item.image}" alt="" />
-                    </div>
-                    
-                    <div class="info d-flex flex-column justify-content-between px-4 py-3 flex-grow-1">
-                    <div>
-                        <div class="d-flex justify-content-between align-items-center">
-                            <h2 class="text-dark fs-5 fw-normal">
-                            ${item.name} (${item.size})
-                            </h2>
-                            <h2 class="text-danger fs-5 fw-normal">
-                            ${formatMoney(item.price)}
-                            </h2>
-                            </div>
-                            <p class="text-black-50">
-                            <span class="border d-inline-block me-3">
-                                <span class="py-2 px-3 d-inline-block fw-bold bg-light" style="cursor: pointer;" onclick = "minusCount(${item.id}, '${item.size}')" >-</span>
-                                <span class="py-2 px-3 d-inline-block fw-bold">${item.count}</span>
-                                <span class="py-2 px-3 d-inline-block fw-bold bg-light" style="cursor: pointer;" onclick = "plusCount(${item.id}, '${item.size}')" >+</span>
-                                </span>
-                                </p>
-                                </div>
-                                
-                                <div>
-                                <button class="text-primary border-0 bg-transparent fw-light" onclick = "deleteProduct(${item.id}, '${item.size}')">
-                                <span><i class="fa-solid fa-trash-can"></i></span>
-                                Xóa
-                                </button>
-                                </div>
-                                </div>
-            </div>`
-
-
-        }
-
-
-    }
-    
-renderProduct(items)
-
-
+l
 
 // Xoa san pham
 function deleteProduct(id, size) {

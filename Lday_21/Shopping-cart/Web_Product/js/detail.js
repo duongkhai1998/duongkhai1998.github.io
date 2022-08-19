@@ -9,6 +9,7 @@ const breadcrumbItemActive = document.querySelector(".breadcrumb-item.active");
 const nameEl = document.querySelector(".product-name");
 const priceEl = document.querySelector(".product-price");
 const sizeEl = document.querySelector(".product-size");
+console.log(sizeEl)
 const descriptionEl = document.querySelector(".product-description");
 const productSizeEl = document.querySelector(".product-size");
 
@@ -20,6 +21,7 @@ const btnAddToCart = document.querySelector(".btn-add-to-cart");
 const productDetail = document.getElementById("detail")
 const mainCarouselEl = document.getElementById("mainCarousel")
 const thumbCarouselEl = document.getElementById("thumbCarousel")
+console.log(mainCarouselEl)
 console.log(productDetail)
 
 // Biến để lưu thông tin sản phẩm theo id
