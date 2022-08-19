@@ -31,9 +31,10 @@ ul {
 
 /* Giỏ hàng */
 .product-item-cart .image img {
+    
     padding: 10px;
     width: 195px;
-    height: 150px;
+   
     object-fit: cover;
 }
 

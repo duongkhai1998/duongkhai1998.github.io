@@ -52,7 +52,7 @@
                 <li style="font-weight: 700;" class=" active"><a href="shop.html">SẢN PHẨM MỚI</a></li>
                 <li style="font-weight: 700;"><a href="shop.html">ÁO</a></li>
                 <li style="font-weight: 700;"><a href="shop.html">QUẦN</a></li>
-                <li style="font-weight: 700;" ><a href="#">LIÊN HỆ</a></li>
+                <li style="font-weight: 700;" ><a href="contact.html">LIÊN HỆ</a></li>
               </ul>
             </nav>
           </div>
@@ -122,17 +122,16 @@
                 
                 <div class="d-flex">
                   
-                  <div class="btn-group">
-                    <button type="button" class="btn btn-white btn-sm dropdown-toggle px-4" id="dropdownMenuReference" data-toggle="dropdown">SẮP XẾP</button>
-                    <div class="dropdown-menu" aria-labelledby="dropdownMenuReference">
-                      <a class="dropdown-item" href="#">Mặc định</a>
-                      <a class="dropdown-item" href="#">Tên, A đến Z</a>
-                      <a class="dropdown-item" href="#">Tên, Z đến A</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Giá, thấp đến cao</a>
-                      <a class="dropdown-item" href="#">Giá, cao đến thấp</a>
-                    </div>
-                  </div>
+                  <div class="btn-sort">
+    
+                    <select name="Sắp xếp" onchange="ascending()" id="sort"> 
+                      <option class="sort" value="default">Sắp xếp</option>
+                      <option class="tang"  value="tang">Giá tăng dần</option>
+                      <option class="giam" value="giam">Giá giảm dần</option>
+                    </select>
+                    
+                  
+                </div>
                 </div>
               </div>
             </div>
@@ -279,19 +278,8 @@
 
               
             </div>
-            <div class="row">
-              <div class="col-md-12 text-center">
-                <div class="site-block-27">
-                  <ul >
-                    <li><a href="#" class="text-dark">&lt;</a></li>
-                    <li class="active" class="text-dark"><span>1</span></li>
-                    <li><a href="#" class="text-dark">2</a></li>
-                    <li><a href="#" class="text-dark">3</a></li>
-                    
-                    <li><a href="#" class="text-dark">&gt;</a></li>
-                  </ul>
-                </div>
-              </div>
+            <div class="button-more d-flex justify-content-center mb-4 pt-5">
+              <a href="shop.html"><button type="button" class="btn btn-outline-dark">XEM THÊM</button></a>
             </div>
           </div>
 
